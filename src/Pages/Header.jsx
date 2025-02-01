@@ -48,7 +48,7 @@ const Header = () => {
           <div className='flex items-center justify-between w-full sm:w-auto'>
             <div className='md:flex md:items-center md:gap-12'>
               <a className='block text-teal-600' href='#'>
-                <img src='src/assets/logo.png' alt='Logo' width={70} />
+                <img src='./assets/Logo.png' alt='Logo' width={70} />
               </a>
             </div>
 
