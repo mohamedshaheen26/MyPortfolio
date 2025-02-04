@@ -17,6 +17,12 @@ export default {
       },
       colors: {
         primary: "#4FC3F7",
+        "custom-gray": {
+          DEFAULT: "#2B2B2B", // Base color
+          100: "#3A3A3A", // Lighter variant 1
+          200: "#4A4A4A", // Lighter variant 2
+          300: "#5A5A5A", // Lighter variant 3
+        },
 
         light: {
           text: "#484E53",

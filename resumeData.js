@@ -1,3 +1,5 @@
+import Services from "./src/Pages/Services";
+
 let resumeData = {
   imagebaseurl: "./assets/Avatar.png",
   name: "Mohamed Shaheen",
@@ -82,6 +84,26 @@ let resumeData = {
       name: "project4",
       description: "mobileapp",
       imgurl: "images/portfolio/phone.jpg",
+    },
+  ],
+  services: [
+    {
+      icon: "fa fa-code",
+      title: "Frontend Development",
+      description:
+        "Translate design mockups and wireframes into fully functional frontend code using HTML, CSS, and JavaScript, ensuring pixel-perfect implementation and cross-browser compatibility.",
+    },
+    {
+      icon: "fa fa-paint-brush",
+      title: "UI/UX Design",
+      description:
+        "I design user interfaces and user experiences for websites and applications, ensuring that they are visually appealing and easy to navigate.",
+    },
+    {
+      icon: "fa fa-mobile",
+      title: "Responsive Design",
+      description:
+        "Create visually appealing and user-friendly websites that adapt seamlessly to various screen sizes and devices, ensuring an optimal viewing experience for all users.",
     },
   ],
 };
