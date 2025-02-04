@@ -1,5 +1,4 @@
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
 import useDarkMode from "../hooks/useDarkMode";
 import { motion } from "framer-motion";
 
@@ -11,10 +10,10 @@ const Home = ({ resumeData }) => {
     setScrollY(window.scrollY);
   };
   return (
-    <section className='home h-screen'>
+    <section className='home flex items-center' id='home'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div
-          className={`content  h-screen flex flex-col justify-center items-center transition-all ease-in-out duration-500`}
+          className={`content flex flex-col justify-center items-center transition-all ease-in-out duration-500`}
         >
           <motion.img
             initial={{ scale: 0 }}
@@ -48,6 +47,12 @@ const Home = ({ resumeData }) => {
           >
             {resumeData.roleDescription}
           </motion.p>
+
+          <div className='flex flex-col justify-center'>
+            <button className='bg-transparent border-2 border-gray-600 dark:border-primary dark:text-white hover:bg-primary hover:border-primary hover:text-white transition-all mt-10 py-3 px-8 rounded-3xl'>
+              Contact Me
+            </button>
+          </div>
         </div>
       </div>
     </section>

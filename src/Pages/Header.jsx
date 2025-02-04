@@ -19,6 +19,7 @@ const Header = () => {
 
       // Determine which section is currently in view
       const sections = ["home", "about", "resume", "projects", "contact"];
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -50,12 +51,6 @@ const Header = () => {
               <a className='block text-teal-600' href='#'>
                 <img src='./assets/Logo.png' alt='Logo' width={70} />
               </a>
-            </div>
-
-            <div className='flex flex-col justify-center sm:hidden'>
-              <button className='bg-transparent border-2 border-gray-600 dark:border-primary dark:text-white hover:bg-primary hover:border-primary hover:text-white transition-all py-2 px-4 rounded-lg'>
-                Contact
-              </button>
             </div>
 
             <div className='flex flex-col justify-center sm:hidden p-3'>
@@ -175,11 +170,6 @@ const Header = () => {
             </nav>
           </div>
 
-          <div className='hidden sm:flex flex-col justify-center'>
-            <button className='bg-transparent border-2 border-gray-600 dark:border-primary dark:text-white hover:bg-primary hover:border-primary hover:text-white transition-all py-2 px-4 rounded-lg'>
-              Contact
-            </button>
-          </div>
           <div className='hidden sm:flex flex-col justify-center p-3'>
             <input
               type='checkbox'

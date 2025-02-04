@@ -2,6 +2,7 @@ import React from "react";
 import resumeData from "../resumeData";
 import Header from "./Pages/Header";
 import Home from "./Pages/Home";
+import About from "./Pages/About";
 
 import "./App.css";
 
@@ -10,6 +11,7 @@ function App() {
     <div className='App'>
       <Header resumeData={resumeData} />
       <Home resumeData={resumeData} />
+      <About resumeData={resumeData} />
     </div>
   );
 }
