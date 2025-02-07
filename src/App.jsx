@@ -7,6 +7,7 @@ import Services from "./Pages/Services";
 
 import "./App.css";
 import Projects from "./Pages/Projects";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <About resumeData={resumeData} />
       <Services resumeData={resumeData} />
       <Projects resumeData={resumeData} />
+      <Contact resumeData={resumeData} />
     </div>
   );
 }
