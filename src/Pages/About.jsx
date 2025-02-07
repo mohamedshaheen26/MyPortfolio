@@ -5,7 +5,7 @@ const About = ({ resumeData }) => {
   const [isInView, setIsInView] = useState(false);
 
   return (
-    <section id='about' className='pt-20'>
+    <section id='about' className='overflow-hidden pt-20'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>
           <motion.div
@@ -24,7 +24,7 @@ const About = ({ resumeData }) => {
               onViewportEnter={() => setIsInView(true)}
               onViewportLeave={() => setIsInView(false)}
               viewport={{ amount: 0.5, once: false }}
-              className='text-2xl font-bold text-light-text mt-5 text-center dark:text-white'
+              className='text-4xl font-bold text-light-text mt-5 mb-1 text-center dark:text-white'
             >
               About Me
             </motion.h2>

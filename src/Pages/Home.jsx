@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Home = ({ resumeData }) => {
   const [isInView, setIsInView] = useState(false);
   return (
-    <section className='home flex items-center' id='home'>
+    <section className='home flex items-center overflow-hidden' id='home'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div
           className={`content flex flex-col justify-center items-center transition-all ease-in-out duration-500`}

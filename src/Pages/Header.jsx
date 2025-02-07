@@ -48,7 +48,7 @@ const Header = () => {
         <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between'>
           <div className='flex items-center justify-between w-full sm:w-auto'>
             <div className='md:flex md:items-center md:gap-12'>
-              <a className='block text-teal-600' href='#'>
+              <a className='block text-teal-600' href='/'>
                 <img src='./assets/Logo.png' alt='Logo' width={70} />
               </a>
             </div>
@@ -108,7 +108,7 @@ const Header = () => {
                       activeSection === "home"
                         ? activeLinkStyle
                         : "text-black dark:text-white"
-                    } transition hover:text-primary`}
+                    } transition hover:text-primary dark:hover:text-primary`}
                     href='#home'
                   >
                     Home
