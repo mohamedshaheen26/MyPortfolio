@@ -47,7 +47,7 @@ const Projects = ({ resumeData }) => {
               animate={isInView ? { scale: 1 } : { scale: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ amount: 0.5, once: false }}
-              className='role text-sm bg-gradient-to-r from-primary to-slate-600 dark:from-primary dark:to-white text-transparent bg-clip-text mt-2'
+              className='role text-sm bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary text-transparent bg-clip-text mt-2'
             >
               Some of my Work
             </motion.span>

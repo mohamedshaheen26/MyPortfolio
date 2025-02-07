@@ -1,27 +1,31 @@
-import Services from "./src/Pages/Services";
-
 let resumeData = {
   imagebaseurl: "./assets/Avatar.png",
   name: "Mohamed Shaheen",
   role: "Frontend Developer",
   linkedinId: "https://www.linkedin.com/in/mohamedshaheen26/",
+  email: "mohamedshaheen1898@gmail.com",
   roleDescription:
     " I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
   socialLinks: [
     {
       name: "linkedin",
       url: "https://www.linkedin.com/in/mohamedshaheen26/",
-      className: "fa fa-linkedin",
+      className: "fab fa-linkedin-in",
     },
     {
       name: "github",
       url: "https://github.com/mohamedshaheen26",
-      className: "fa fa-github",
+      className: "fab fa-github",
+    },
+    {
+      name: "FaceBook",
+      url: "https://www.facebook.com/profile.php?id=100070353519910",
+      className: "fab fa-facebook-f",
     },
     {
       name: "UpWork",
       url: "https://www.upwork.com/freelancers/~0155af2d3165d518b4?viewMode=1",
-      className: "fa fa-link",
+      className: "fas fa-link",
     },
   ],
   aboutme:

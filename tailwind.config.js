@@ -16,7 +16,8 @@ export default {
         "dark-bgimg": "url('/src/assets/dark-Background.png')",
       },
       colors: {
-        primary: "#4FC3F7",
+        primary: "#00b0ff",
+        secondary: "#95675d",
         "custom-gray": {
           DEFAULT: "#2B2B2B", // Base color
           100: "#3A3A3A", // Lighter variant 1

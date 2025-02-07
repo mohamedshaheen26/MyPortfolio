@@ -35,7 +35,7 @@ const About = ({ resumeData }) => {
               onViewportEnter={() => setIsInView(true)}
               onViewportLeave={() => setIsInView(false)}
               viewport={{ amount: 0.5, once: false }}
-              className='role text-sm bg-gradient-to-r from-primary to-slate-600 dark:from-primary dark:to-white text-transparent bg-clip-text mt-2'
+              className='role text-sm bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary text-transparent bg-clip-text mt-2'
             >
               Get to know me
             </motion.span>

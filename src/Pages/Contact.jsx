@@ -25,7 +25,7 @@ const Contact = ({ resumeData }) => {
     }
   }, [state.succeeded]);
   return (
-    <section id='contact' className='overflow-hidden pt-20'>
+    <section id='contact' className='overflow-hidden pt-20 mb-32'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>
           <motion.div
@@ -55,7 +55,7 @@ const Contact = ({ resumeData }) => {
               animate={isInView ? { scale: 1 } : { scale: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ amount: 0.5, once: false }}
-              className='role text-sm bg-gradient-to-r from-primary to-slate-600 dark:from-primary dark:to-white text-transparent bg-clip-text mt-2'
+              className='role text-sm bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary text-transparent bg-clip-text mt-2'
             >
               Lets work together
             </motion.span>
