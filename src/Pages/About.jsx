@@ -1,32 +1,32 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import Slider from "react-slick";
 
 const About = ({ resumeData }) => {
-  const [isInView, setIsInView] = useState(false);
+  const scrollableParentRef = useRef(null);
+  const isInView = useInView(scrollableParentRef, { amount: 0, once: false });
 
-  // Slider settings
   const settings = {
-    dots: false, // Hide dots
-    arrows: false, // Hide arrows
-    slidesToShow: 8, // Number of slides to show at once
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 0, // Autoplay speed in milliseconds
-    pauseOnHover: true, // Pause autoplay on hover
-    speed: 5000, // Transition speed
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    slidesToShow: 7,
+    autoplaySpeed: 0,
+    pauseOnHover: true,
+    speed: 5000,
     cssEase: "linear",
     pauseOnHover: false,
     responsive: [
       {
-        breakpoint: 1024, // For screens smaller than 1024px
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 7, // Show 2 slides
+          slidesToShow: 5,
         },
       },
       {
-        breakpoint: 768, // For screens smaller than 768px
+        breakpoint: 768,
         settings: {
-          slidesToShow: 4, // Show 1 slide
+          slidesToShow: 3,
         },
       },
     ],
@@ -34,25 +34,23 @@ const About = ({ resumeData }) => {
 
   return (
     <>
-      <section id='about' className='overflow-hidden pt-20'>
+      <section
+        id='about'
+        className='overflow-hidden pt-20'
+        ref={scrollableParentRef}
+      >
         <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>
             <motion.div
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.8 }}
-              onViewportEnter={() => setIsInView(true)}
-              onViewportLeave={() => setIsInView(false)}
-              viewport={{ amount: 0.5, once: false }}
               className='special-title'
             >
               <motion.h2
                 initial={{ x: 200 }}
                 animate={isInView ? { x: 0 } : { x: 200 }}
                 transition={{ duration: 0.8 }}
-                onViewportEnter={() => setIsInView(true)}
-                onViewportLeave={() => setIsInView(false)}
-                viewport={{ amount: 0.5, once: false }}
                 className='text-4xl font-bold text-light-text mt-5 mb-1 text-center dark:text-white'
               >
                 About Me
@@ -61,9 +59,6 @@ const About = ({ resumeData }) => {
                 initial={{ x: -200 }}
                 animate={isInView ? { x: 0 } : { x: -200 }}
                 transition={{ duration: 0.8 }}
-                onViewportEnter={() => setIsInView(true)}
-                onViewportLeave={() => setIsInView(false)}
-                viewport={{ amount: 0.5, once: false }}
                 className='role text-sm bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary text-transparent bg-clip-text mt-2'
               >
                 Get to know me
@@ -71,30 +66,97 @@ const About = ({ resumeData }) => {
             </motion.div>
 
             <motion.p
-              initial={{ y: 50, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+              initial={{ x: -50, opacity: 0 }}
+              animate={isInView ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
               transition={{ duration: 0.8 }}
-              onViewportEnter={() => setIsInView(true)}
-              onViewportLeave={() => setIsInView(false)}
-              viewport={{ amount: 0.5, once: false }}
-              className='lead text-md max-w-3xl mt-5 text-light-text dark:text-white'
+              className='text-md max-w-3xl mt-5 text-light-text dark:text-white'
             >
               {resumeData.aboutme}
             </motion.p>
+
+            <div className='max-w-4xl py-6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden'>
+              <motion.div
+                initial={{ x: -500, opacity: 0 }}
+                animate={
+                  isInView ? { x: 0, opacity: 1 } : { x: -500, opacity: 0 }
+                }
+                transition={{ duration: 0.3 }}
+                whileHover={{ scale: 1.05 }}
+                className='service border border-[white] dark:border-[#2B2B2B] rounded-lg p-8 
+                bg-[linear-gradient(136deg,#f5f8ff00,#BCE7FA)] 
+                dark:bg-[linear-gradient(136deg,rgb(28,28,28),#050505)] 
+                dark:mix-blend-plus-lighter flex flex-col items-start 
+                transition-all duration-300 text-left'
+              >
+                <div className='space-y-2'>
+                  {resumeData.additionalInfo.map((info) => (
+                    <p
+                      key={info.title}
+                      className='text-gray-700 dark:text-white flex items-center'
+                    >
+                      <i
+                        className={`${info.icon} me-2 text-[#00b0ff] text-2xl`}
+                      ></i>
+                      {info.title}
+                    </p>
+                  ))}
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ x: 500, opacity: 0 }}
+                animate={
+                  isInView ? { x: 0, opacity: 1 } : { x: 500, opacity: 0 }
+                }
+                transition={{ duration: 0.3 }}
+                whileHover={{ scale: 1.05 }}
+                className='service border border-[white] dark:border-[#2B2B2B] rounded-lg p-8 
+                bg-[linear-gradient(136deg,#f5f8ff00,#BCE7FA)] 
+                dark:bg-[linear-gradient(136deg,rgb(28,28,28),#050505)] 
+                dark:mix-blend-plus-lighter flex flex-col items-start 
+                transition-all duration-300 text-left'
+              >
+                <div className='space-y-2'>
+                  <p className='text-gray-700 dark:text-white'>
+                    <span className='font-semibold'>University:</span>{" "}
+                    {resumeData.education.UniversityName}
+                  </p>
+                  <p className='text-gray-700 dark:text-white'>
+                    <span className='font-semibold'>Specialization:</span>{" "}
+                    {resumeData.education.specialization}
+                  </p>
+                  <p className='text-gray-700 dark:text-white'>
+                    <span className='font-semibold'>Graduation:</span>{" "}
+                    {resumeData.education.graduation}
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
-      {/* Slider Section */}
-      <div className='skills w-full mt-10'>
+      <motion.div
+        initial={{ x: -50, opacity: 0 }}
+        animate={isInView ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
+        transition={{ duration: 0.8 }}
+        className='skills w-full'
+      >
         <Slider {...settings}>
           {resumeData.skills &&
             resumeData.skills.map((skill, index) => (
-              <div key={index} className='text-center p-4 rounded-lg'>
-                <img src={skill.img} width={60} alt={skill.name} />
-              </div>
+              <motion.div
+                whileHover={{ scale: 1.1, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                key={index}
+                className='skill text-center p-4 opacity-75 rounded-lg'
+              >
+                <img src={skill.img} width={30} alt={skill.name} />
+                <p className='text-sm text-light-text dark:text-white'>
+                  {skill.name}
+                </p>
+              </motion.div>
             ))}
         </Slider>
-      </div>
+      </motion.div>
     </>
   );
 };

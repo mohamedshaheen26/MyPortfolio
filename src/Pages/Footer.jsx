@@ -1,7 +1,8 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Footer = ({ resumeData }) => {
+  
   return (
     <footer className='overflow-hidden pt-20'>
       <div className='mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center mb-10'>

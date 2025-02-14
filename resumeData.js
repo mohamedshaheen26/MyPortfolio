@@ -2,9 +2,21 @@ let resumeData = {
   imagebaseurl: "./assets/Avatar.png",
   name: "Mohamed Shaheen",
   role: "Frontend Developer",
-  address: "Tanta, Egypt",
-  mobile: "+201144201011",
   email: "mohamedshaheen1898@gmail.com",
+  additionalInfo: [
+    {
+      icon: "fas fa-map-marker-alt",
+      title: "Tanta, Egypt",
+    },
+    {
+      icon: "fas fa-mobile-alt",
+      title: "+201144201011",
+    },
+    {
+      icon: "fas fa-envelope",
+      title: "mohamedshaheen1898@gmail.com",
+    },
+  ],
   website: "https://mohamed-shaheen-98.vercel.app/",
   linkedinId: "https://www.linkedin.com/in/mohamedshaheen26/",
   roleDescription:
@@ -32,16 +44,12 @@ let resumeData = {
     },
   ],
   aboutme:
-    "UI Developer with 1+ years of experience in frontend development and user interface design, expert in HTML, CSS, and JavaScript. My key achievements include successfully developing user interface components for an ERP system, ensuring integration with backend functionalities for real-time data processing, and providing ongoing support based on user feedback. Seeking a UI/UX Developer position at [InnoTech], where I bring my frontend development and UI design skills to support your mission of enhancing user experiences and delivering high-quality software solutions.",
-  education: [
-    {
-      UniversityName: "Tanta Unversity",
-      specialization: "Art",
-      MonthOfPassing: "Aug",
-      YearOfPassing: "2022",
-      Achievements: "",
-    },
-  ],
+    "UI Developer with 1+ years of experience in frontend development and UI design. I specialize in creating responsive, user-friendly interfaces. ensuring seamless backend integration for real-time data processing, and refining designs based on user feedback. I’m passionate about building intuitive and engaging digital experiences that drive user satisfaction.",
+  education: {
+    UniversityName: "Tanta Unversity",
+    specialization: "Art",
+    graduation: "Aug 2022",
+  },
   work: [
     {
       CompanyName: "InnoTech Company",
@@ -91,7 +99,11 @@ let resumeData = {
     },
     {
       name: "Blazor",
-      img: "./assets//blazor.svg",
+      img: "./assets/blazor.svg",
+    },
+    {
+      name: "Photoshop",
+      img: "./assets/photoshop.svg",
     },
   ],
   projects: [

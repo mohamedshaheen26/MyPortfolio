@@ -49,7 +49,12 @@ const Header = () => {
           <div className='flex items-center justify-between w-full sm:w-auto'>
             <div className='md:flex md:items-center md:gap-12'>
               <a className='block text-teal-600' href='/'>
-                <img src='./assets/Logo.png' alt='Logo' width={70} />
+                <img
+                  src='./assets/Logo.png'
+                  alt='Logo'
+                  width={70}
+                  loading='lazy'
+                />
               </a>
             </div>
 
@@ -109,7 +114,7 @@ const Header = () => {
                         ? activeLinkStyle
                         : "text-black dark:text-white"
                     } transition hover:text-primary dark:hover:text-primary`}
-                    href='#home'
+                    href='/'
                   >
                     Home
                   </a>

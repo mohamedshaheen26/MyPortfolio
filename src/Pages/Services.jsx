@@ -1,55 +1,51 @@
-import React, { useState } from "react";
-import { delay, motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Services = ({ resumeData }) => {
-  const [isInView, setIsInView] = useState(false);
+  const scrollableParentRef = useRef(null);
+  const isInView = useInView(scrollableParentRef, { amount: 0, once: false });
 
   const itemVariants = {
     hidden: (index) => {
-      if (index === 0) return { opacity: 0, x: -200 };
+      if (index === 0) return { opacity: 0, x: -300 };
       if (index === 1) return { scale: 0 };
-      if (index === 2) return { opacity: 0, x: 200 };
+      if (index === 2) return { opacity: 0, x: 300 };
     },
     visible: (index) => ({
       opacity: 1,
       scale: 1,
       x: 0,
-      transition: { duration: 0.3, delay: index == 1 ? 0.5 : 0 },
+      transition: { duration: 0.1, delay: index == 1 ? 0.5 : 0 },
     }),
     hover: { scale: 0.99 },
   };
 
   return (
-    <section id='services' className='pt-20 overflow-hidden'>
+    <section
+      ref={scrollableParentRef}
+      id='services'
+      className='pt-20 overflow-hidden'
+    >
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8 }}
-            onViewportEnter={() => setIsInView(true)}
-            onViewportLeave={() => setIsInView(false)}
-            viewport={{ amount: 0.5, once: false }}
             className='special-title'
           >
             <motion.h2
               initial={{ x: 200 }}
               animate={isInView ? { x: 0 } : { x: 200 }}
               transition={{ duration: 0.8 }}
-              onViewportEnter={() => setIsInView(true)}
-              onViewportLeave={() => setIsInView(false)}
-              viewport={{ amount: 0.5, once: false }}
               className='text-4xl font-bold text-light-text mt-5 mb-1 text-center dark:text-white'
             >
               What I do
             </motion.h2>
             <motion.span
               initial={{ scale: 0 }}
-              onViewportLeave={() => setIsInView(false)}
-              onViewportEnter={() => setIsInView(true)}
               animate={isInView ? { scale: 1 } : { scale: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ amount: 0.5, once: false }}
               className='role text-sm bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary text-transparent bg-clip-text mt-2'
             >
               My Services
@@ -66,7 +62,6 @@ const Services = ({ resumeData }) => {
                       initial='hidden'
                       whileInView='visible'
                       whileHover='hover'
-                      viewport={{ once: false, amount: 0.3 }}
                       custom={index}
                       className='service border border-[white] dark:border-[#2B2B2B] rounded-lg p-8 
                       bg-[linear-gradient(136deg,#f5f8ff00,#BCE7FA)] 

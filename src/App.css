@@ -2,6 +2,30 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: #00b0ff;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00b0ff;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #a5c0ce;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "poppins", sans-serif;
 }
@@ -31,4 +55,10 @@ header {
 
 .skills {
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.skills .skill {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
 }

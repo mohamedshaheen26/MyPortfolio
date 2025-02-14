@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = ({ resumeData }) => {
-  const [isInView, setIsInView] = useState(false);
+  const scrollableParentRef = useRef(null);
+  const isInView = useInView(scrollableParentRef, { amount: 0, once: false });
+
   const [state, handleSubmit] = useForm("myzkpdgq");
 
   useEffect(() => {
@@ -25,36 +27,31 @@ const Contact = ({ resumeData }) => {
     }
   }, [state.succeeded]);
   return (
-    <section id='contact' className='overflow-hidden pt-20 mb-32'>
+    <section
+      ref={scrollableParentRef}
+      id='contact'
+      className='overflow-hidden pt-20 mb-32'
+    >
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8 }}
-            onViewportEnter={() => setIsInView(true)}
-            onViewportLeave={() => setIsInView(false)}
-            viewport={{ amount: 0.5, once: false }}
             className='special-title'
           >
             <motion.h2
               initial={{ x: 200 }}
               animate={isInView ? { x: 0 } : { x: 200 }}
               transition={{ duration: 0.8 }}
-              onViewportEnter={() => setIsInView(true)}
-              onViewportLeave={() => setIsInView(false)}
-              viewport={{ amount: 0.5, once: false }}
               className='text-4xl font-bold text-light-text mt-5 mb-1 text-center dark:text-white'
             >
               Get In Touch
             </motion.h2>
             <motion.span
               initial={{ scale: 0 }}
-              onViewportLeave={() => setIsInView(false)}
-              onViewportEnter={() => setIsInView(true)}
               animate={isInView ? { scale: 1 } : { scale: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ amount: 0.5, once: false }}
               className='role text-sm bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary text-transparent bg-clip-text mt-2'
             >
               Lets work together
@@ -73,9 +70,6 @@ const Contact = ({ resumeData }) => {
                       animate={
                         isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
                       }
-                      onViewportEnter={() => setIsInView(true)}
-                      onViewportLeave={() => setIsInView(false)}
-                      viewport={{ amount: 0.5, once: false }}
                       transition={{ duration: 0.8 }}
                       className='flex flex-col space-y-2'
                     >
@@ -104,9 +98,6 @@ const Contact = ({ resumeData }) => {
                       animate={
                         isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
                       }
-                      onViewportEnter={() => setIsInView(true)}
-                      onViewportLeave={() => setIsInView(false)}
-                      viewport={{ amount: 0.5, once: false }}
                       transition={{ duration: 0.8, delay: 0.2 }}
                       className='flex flex-col space-y-2 mt-4'
                     >
@@ -135,9 +126,6 @@ const Contact = ({ resumeData }) => {
                       animate={
                         isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
                       }
-                      onViewportEnter={() => setIsInView(true)}
-                      onViewportLeave={() => setIsInView(false)}
-                      viewport={{ amount: 0.5, once: false }}
                       transition={{ duration: 0.8, delay: 0.4 }}
                       className='flex flex-col space-y-2 mt-4'
                     >
@@ -166,9 +154,6 @@ const Contact = ({ resumeData }) => {
                       animate={
                         isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
                       }
-                      onViewportEnter={() => setIsInView(true)}
-                      onViewportLeave={() => setIsInView(false)}
-                      viewport={{ amount: 0.5, once: false }}
                       transition={{ duration: 0.8, delay: 0.6 }}
                       type='submit'
                       disabled={state.submitting}

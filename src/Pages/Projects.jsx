@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 const Projects = ({ resumeData }) => {
-  const [isInView, setIsInView] = useState(false);
-  const [showCard, setShowCard] = useState("all");
+  const scrollableParentRef = useRef(null);
+  const isInView = useInView(scrollableParentRef, { amount: 0, once: false });
 
+  const [showCard, setShowCard] = useState("all");
   const filteredProjects =
     showCard === "all"
       ? resumeData.projects
@@ -17,36 +18,31 @@ const Projects = ({ resumeData }) => {
   };
 
   return (
-    <section id='projects' className='overflow-hidden pt-20'>
+    <section
+      ref={scrollableParentRef}
+      id='projects'
+      className='overflow-hidden pt-20'
+    >
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8 }}
-            onViewportEnter={() => setIsInView(true)}
-            onViewportLeave={() => setIsInView(false)}
-            viewport={{ amount: 0.5, once: false }}
             className='special-title'
           >
             <motion.h2
               initial={{ x: 200 }}
               animate={isInView ? { x: 0 } : { x: 200 }}
               transition={{ duration: 0.8 }}
-              onViewportEnter={() => setIsInView(true)}
-              onViewportLeave={() => setIsInView(false)}
-              viewport={{ amount: 0.5, once: false }}
               className='text-4xl font-bold text-light-text mt-5 mb-1 text-center dark:text-white'
             >
               Projects
             </motion.h2>
             <motion.span
               initial={{ scale: 0 }}
-              onViewportLeave={() => setIsInView(false)}
-              onViewportEnter={() => setIsInView(true)}
               animate={isInView ? { scale: 1 } : { scale: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ amount: 0.5, once: false }}
               className='role text-sm bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary text-transparent bg-clip-text mt-2'
             >
               Some of my Work
@@ -61,8 +57,6 @@ const Projects = ({ resumeData }) => {
                 <motion.li
                   key={category}
                   initial={{ scale: 0 }}
-                  onViewportLeave={() => setIsInView(false)}
-                  onViewportEnter={() => setIsInView(true)}
                   animate={isInView ? { scale: 1 } : { scale: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className='mb-1'
