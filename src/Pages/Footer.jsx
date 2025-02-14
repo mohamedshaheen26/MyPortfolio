@@ -56,7 +56,7 @@ const Footer = ({ resumeData }) => {
           </span>
           . All rights reserved.
         </p>
-        <div className='flex gap-4'>
+        <div className='flex gap-4 mb-5 md:mb-0'>
           {resumeData.socialLinks &&
             resumeData.socialLinks.map((item) => {
               return (

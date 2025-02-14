@@ -2,8 +2,11 @@ let resumeData = {
   imagebaseurl: "./assets/Avatar.png",
   name: "Mohamed Shaheen",
   role: "Frontend Developer",
-  linkedinId: "https://www.linkedin.com/in/mohamedshaheen26/",
+  address: "Tanta, Egypt",
+  mobile: "+201144201011",
   email: "mohamedshaheen1898@gmail.com",
+  website: "https://mohamed-shaheen-98.vercel.app/",
+  linkedinId: "https://www.linkedin.com/in/mohamedshaheen26/",
   roleDescription:
     " I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
   socialLinks: [
@@ -30,8 +33,6 @@ let resumeData = {
   ],
   aboutme:
     "UI Developer with 1+ years of experience in frontend development and user interface design, expert in HTML, CSS, and JavaScript. My key achievements include successfully developing user interface components for an ERP system, ensuring integration with backend functionalities for real-time data processing, and providing ongoing support based on user feedback. Seeking a UI/UX Developer position at [InnoTech], where I bring my frontend development and UI design skills to support your mission of enhancing user experiences and delivering high-quality software solutions.",
-  address: "Tanta, Egypt",
-  website: "",
   education: [
     {
       UniversityName: "Tanta Unversity",
@@ -53,19 +54,44 @@ let resumeData = {
   skillsDescription: "Your skills here",
   skills: [
     {
-      skillname: "HTML5",
+      name: "HTML5",
+      img: "./assets/html5.svg",
     },
     {
-      skillname: "CSS3",
+      name: "CSS3",
+      img: "./assets/css3.svg",
     },
     {
-      skillname: "JavaScript",
+      name: "Boostrap",
+      img: "./assets/bootstrap.svg",
     },
     {
-      skillname: "TypeScript",
+      name: "Tailwind CSS",
+      img: "./assets/tailwind.svg",
     },
     {
-      skillname: "Reactjs",
+      name: "JavaScript",
+      img: "./assets/javascript.svg",
+    },
+    {
+      name: "TypeScript",
+      img: "./assets/typescript.svg",
+    },
+    {
+      name: "React Js",
+      img: "./assets/react.svg",
+    },
+    {
+      name: "Git",
+      img: "./assets/git.svg",
+    },
+    {
+      name: "Github",
+      img: "./assets/github.svg",
+    },
+    {
+      name: "Blazor",
+      img: "./assets//blazor.svg",
     },
   ],
   projects: [
