@@ -18,7 +18,14 @@ const Header = () => {
       }
 
       // Determine which section is currently in view
-      const sections = ["home", "about", "services", "projects", "contact"];
+      const sections = [
+        "home",
+        "about",
+        "experience",
+        "services",
+        "projects",
+        "contact",
+      ];
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -130,6 +137,19 @@ const Header = () => {
                     href='#about'
                   >
                     About
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className={`${
+                      activeSection === "experience"
+                        ? activeLinkStyle
+                        : "text-black dark:text-white"
+                    } transition hover:text-primary dark:hover:text-primary`}
+                    href='#experience'
+                  >
+                    Experience
                   </a>
                 </li>
 

@@ -50,16 +50,21 @@ let resumeData = {
     specialization: "Art",
     graduation: "Aug 2022",
   },
-  work: [
+  experience: [
     {
-      CompanyName: "InnoTech Company",
-      specialization: "UI Developer",
+      CompanyName: "InnoTech",
+      specialization: "UI/UX Developer",
       MonthOfLeaving: "Oct",
       YearOfLeaving: "2023",
-      Achievements: "",
+      description: [
+        "Developed user interface components for an ERP system using HTML, CSS, JavaScript, and Bootstrap",
+        "Collaborated with cross-functional teams to ensure frontend solutions met project requirements",
+        "Integrated frontend with backend functionalities for real-time data processing Conducted testing and",
+        "debugging to ensure reliability and performance Provided ongoing support and enhancements based",
+        "on user feedback and business needs Stayed updated on frontend development trends for continuous improvement",
+      ],
     },
   ],
-  skillsDescription: "Your skills here",
   skills: [
     {
       name: "HTML5",

@@ -36,7 +36,7 @@ const About = ({ resumeData }) => {
     <>
       <section
         id='about'
-        className='overflow-hidden pt-20'
+        className='overflow-hidden pt-24 md:pt-20'
         ref={scrollableParentRef}
       >
         <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
