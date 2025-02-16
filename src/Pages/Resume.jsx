@@ -37,32 +37,40 @@ const resume = ({ resumeData }) => {
             </motion.span>
           </motion.div>
         </div>
-        <div class='relative mt-8 p-8'>
-          <div class='absolute left-1/2 top-0 h-full w-[2px] bg-primary transform -translate-x-1/2'></div>
+        <div className='relative mt-8 p-8'>
+          {/* Vertical Line */}
+          <div className='absolute md:left-1/2 top-0 h-full w-[2px] bg-primary transform -translate-x-1/2'></div>
 
           {resumeData.experience &&
             resumeData.experience.map((item, index) => {
               return (
-                <div class='mt-12 mb-12 flex items-center'>
-                  <div class='absolute top-[50px] left-1/2 transform -translate-x-1/2 bg-primary text-white font-bold py-1 px-3 rounded-full -mt-8'>
+                <div
+                  key={index}
+                  className='mt-12 mb-12 flex flex-col md:flex-row items-center'
+                >
+                  <div className='absolute top-[50px] left-[2rem] md:left-1/2 transform -translate-x-1/2 bg-primary text-white font-bold py-1 px-3 rounded-full -mt-8'>
                     {item.YearOfLeaving}
                   </div>
-                  <div class='flex-1 pr-8 text-left mr-7'>
-                    <div class='bg-white shadow-md p-6 rounded-lg relative bullet-before triangle-after'>
-                      <h3 class='font-bold text-blue-500'>
+
+                  <div className='flex-1 md:pr-8 pl-8 md:pl-0 text-left md:mr-7 ml-7 md:ml-0 w-full md:w-auto'>
+                    <div
+                      className='border border-[white] dark:border-[#2B2B2B] rounded-lg p-8 
+                      bg-[linear-gradient(136deg,#f5f8ff00,#BCE7FA)] 
+                      dark:bg-[linear-gradient(136deg,rgb(28,28,28),#050505)] 
+                      dark:mix-blend-plus-lighter relative bullet-before triangle-after'
+                    >
+                      <h3 className='text-md font-bold text-[#484E53] mt-2 dark:text-white'>
                         {item.CompanyName}
                       </h3>
-                      <span>{item.specialization}</span>
-                      <p class='text-gray-700'>
-                        <ul className='list-disc list-inside'>
-                          {item.description.map((item) => {
-                            return <li>{item}</li>;
-                          })}
-                        </ul>
+                      <span className='text-primary'>
+                        {item.specialization}
+                      </span>
+                      <p className='text-left text-sm text-[#1C1E53] dark:text-[#E1E1E1] mt-2'>
+                        {item.description}
                       </p>
                     </div>
                   </div>
-                  <div class='flex-1'></div>
+                  <div className='flex-1 hidden md:block'></div>
                 </div>
               );
             })}

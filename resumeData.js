@@ -56,13 +56,8 @@ let resumeData = {
       specialization: "UI/UX Developer",
       MonthOfLeaving: "Oct",
       YearOfLeaving: "2023",
-      description: [
-        "Developed user interface components for an ERP system using HTML, CSS, JavaScript, and Bootstrap",
-        "Collaborated with cross-functional teams to ensure frontend solutions met project requirements",
-        "Integrated frontend with backend functionalities for real-time data processing Conducted testing and",
-        "debugging to ensure reliability and performance Provided ongoing support and enhancements based",
-        "on user feedback and business needs Stayed updated on frontend development trends for continuous improvement",
-      ],
+      description:
+        "As a UI/UX Developer at InnoTech, I built ERP system interfaces using HTML, CSS, JavaScript, and Bootstrap. I collaborated with teams, integrated frontend with backend for real-time data, tested for performance, and improved designs based on user feedback.",
     },
   ],
   skills: [

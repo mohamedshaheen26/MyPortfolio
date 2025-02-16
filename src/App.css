@@ -62,3 +62,12 @@ header {
   align-items: center;
   gap: 10px;
 }
+
+@keyframes pulse {
+  0% {
+    background-color: #00b0ff;
+  }
+  100% {
+    background-color: white;
+  }
+}

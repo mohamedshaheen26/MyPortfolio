@@ -35,6 +35,15 @@ export default {
           bg: "#1A1A1A",
         },
       },
+      animation: {
+        pulse: "pulse .8s alternate infinite",
+      },
+      keyframes: {
+        pulse: {
+          "0%": { backgroundColor: "#00b0ff" },
+          "100%": { backgroundColor: "#fff" },
+        },
+      },
     },
   },
   plugins: [],
