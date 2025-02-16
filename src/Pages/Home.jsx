@@ -57,7 +57,15 @@ const Home = ({ resumeData }) => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className='flex flex-col justify-center'
           >
-            <button className='bg-transparent border-2 border-gray-600 dark:border-primary dark:text-white hover:bg-primary hover:border-primary hover:text-white transition-all mt-10 py-3 px-8 rounded-3xl'>
+            <button
+              className='bg-transparent border-2 border-gray-600 dark:border-primary dark:text-white hover:bg-primary hover:border-primary hover:text-white transition-all mt-10 py-3 px-8 rounded-3xl'
+              onClick={() =>
+                window.open(
+                  "https://wa.me/+201144201011?text=Hello%20I%20am%20interested%20in%20your%20services",
+                  "_blank"
+                )
+              }
+            >
               Contact Me
             </button>
           </motion.div>
