@@ -39,7 +39,12 @@ const resume = ({ resumeData }) => {
         </div>
         <div className='relative mt-8 p-8'>
           {/* Vertical Line */}
-          <div className='absolute md:left-1/2 top-0 h-full w-[2px] bg-primary transform -translate-x-1/2'></div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 2 }}
+            className='absolute md:left-1/2 top-0 h-full w-[2px] bg-primary transform -translate-x-1/2'
+          ></motion.div>
 
           {resumeData.experience &&
             resumeData.experience.map((item, index) => {
@@ -48,18 +53,30 @@ const resume = ({ resumeData }) => {
                   key={index}
                   className='mt-12 mb-12 flex flex-col md:flex-row items-center'
                 >
-                  <div className='absolute top-[50px] left-[2rem] md:left-1/2 transform -translate-x-1/2 bg-primary text-white font-bold py-1 px-3 rounded-full -mt-8'>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{ duration: 2 }}
+                    className='absolute top-[50px] left-[2rem] md:left-1/2 transform -translate-x-1/2 bg-primary text-white font-bold py-1 px-3 rounded-full -mt-8'
+                  >
                     {item.YearOfLeaving}
-                  </div>
+                  </motion.div>
 
                   <div className='flex-1 md:pr-8 pl-8 md:pl-0 text-left md:mr-7 ml-7 md:ml-0 w-full md:w-auto'>
-                    <div
+                    <motion.div
+                      initial={{ x: -300, opacity: 0 }}
+                      animate={
+                        isInView
+                          ? { x: 0, opacity: 1 }
+                          : { x: -300, opacity: 0 }
+                      }
+                      transition={{ duration: 0.5 }}
                       className='border border-[white] dark:border-[#2B2B2B] rounded-lg p-8 
                       bg-[linear-gradient(136deg,#f5f8ff00,#BCE7FA)] 
                       dark:bg-[linear-gradient(136deg,rgb(28,28,28),#050505)] 
                       dark:mix-blend-plus-lighter relative bullet-before triangle-after'
                     >
-                      <h3 className='text-md font-bold text-[#484E53] mt-2 dark:text-white'>
+                      <h3 className='text-md font-bold text-[#484E53] dark:text-white'>
                         {item.CompanyName}
                       </h3>
                       <span className='text-primary'>
@@ -68,7 +85,7 @@ const resume = ({ resumeData }) => {
                       <p className='text-left text-sm text-[#1C1E53] dark:text-[#E1E1E1] mt-2'>
                         {item.description}
                       </p>
-                    </div>
+                    </motion.div>
                   </div>
                   <div className='flex-1 hidden md:block'></div>
                 </div>

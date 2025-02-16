@@ -36,17 +36,11 @@ body {
 
 header {
   position: sticky;
-  top: 0;
+  top: -2px;
   left: 0;
   right: 0;
   z-index: 99999;
   transition: 0.3s cubic-bezier(0, 0.54, 1, 1);
-}
-
-@media (max-width: 640px) {
-  header {
-    height: 105px;
-  }
 }
 
 .home {
