@@ -266,7 +266,7 @@ const Header = () => {
         </nav>
 
         <div className='flex items-center gap-4'>
-          <div className='flex flex-col justify-center'>
+          <div className='flex flex-col justify-center mt-4'>
             <input
               type='checkbox'
               name='light-switch'
@@ -279,8 +279,8 @@ const Header = () => {
             <label className='relative cursor-pointer' htmlFor='light-switch'>
               <svg
                 className='dark:hidden'
-                width='24'
-                height='24'
+                width='32'
+                height='32'
                 xmlns='http://www.w3.org/2000/svg'
               >
                 <path
@@ -294,8 +294,8 @@ const Header = () => {
               </svg>
               <svg
                 className='hidden dark:block'
-                width='24'
-                height='24'
+                width='32'
+                height='32'
                 xmlns='http://www.w3.org/2000/svg'
               >
                 <path
