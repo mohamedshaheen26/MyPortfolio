@@ -1,9 +1,56 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 
 const Home = ({ resumeData }) => {
   const scrollableParentRef = useRef(null);
   const isInView = useInView(scrollableParentRef, { amount: 0, once: false });
+
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0); // Track current role
+
+  useEffect(() => {
+    const roles = resumeData.roles;
+    const role = roles[currentRoleIndex];
+
+    if (isTyping) {
+      // Typing phase: add one character at a time
+      if (currentIndex < role.length) {
+        const timeout = setTimeout(() => {
+          setDisplayText((prev) => prev + role[currentIndex]);
+          setCurrentIndex((prev) => prev + 1);
+        }, 100); // Adjust typing speed (100ms per character)
+
+        return () => clearTimeout(timeout);
+      } else {
+        // Switch to backspacing phase after a short delay
+        const switchTimeout = setTimeout(() => {
+          setIsTyping(false);
+        }, 1000); // Delay before starting backspacing (1 second)
+
+        return () => clearTimeout(switchTimeout);
+      }
+    } else {
+      // Backspacing phase: remove one character at a time
+      if (currentIndex > 0) {
+        const timeout = setTimeout(() => {
+          setDisplayText((prev) => prev.slice(0, -1));
+          setCurrentIndex((prev) => prev - 1);
+        }, 100); // Adjust backspacing speed (50ms per character)
+
+        return () => clearTimeout(timeout);
+      } else {
+        // Switch to the next role after a short delay
+        const switchTimeout = setTimeout(() => {
+          setIsTyping(true);
+          setCurrentRoleIndex((prev) => (prev + 1) % roles.length); // Move to the next role
+        }, 0); // Delay before starting the next role (1 second)
+
+        return () => clearTimeout(switchTimeout);
+      }
+    }
+  }, [currentIndex, isTyping, currentRoleIndex]);
 
   return (
     <section
@@ -38,7 +85,8 @@ const Home = ({ resumeData }) => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className='role text-xl sm:text-2xl font-semibold bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary text-transparent bg-clip-text mt-2'
           >
-            {resumeData.role}
+            {displayText}
+            <span className='cursor'>|</span>
           </motion.span>
           <motion.p
             initial={{ scale: 0 }}

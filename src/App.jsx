@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import resumeData from "../resumeData";
 import Header from "./Pages/Header";
 import Home from "./Pages/Home";
@@ -12,6 +13,31 @@ import Footer from "./Pages/Footer";
 import "./App.css";
 
 function App() {
+  const [loader, setLoader] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Load dark mode preference from localStorage
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem("theme") === "dark";
+    setIsDarkMode(savedDarkMode);
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoader(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loader) {
+    return (
+      <div
+        className={`flex justify-center items-center fixed top-0 left-0 w-full h-full z-50 ${
+          isDarkMode ? "bg-[#1a1a1a]" : "bg-[#e0e8f6]"
+        }`}
+      >
+        <span className={`spinner ${isDarkMode ? "dark-spinner" : ""}`}></span>
+      </div>
+    );
+  }
   return (
     <div className='App'>
       <Header resumeData={resumeData} />

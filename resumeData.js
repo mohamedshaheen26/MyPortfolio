@@ -1,7 +1,7 @@
 let resumeData = {
   imagebaseurl: "./assets/Avatar.png",
   name: "Mohamed Shaheen",
-  role: "Frontend Developer",
+  roles: ["Frontend Developer", "React Developer", "UI/UX Designer"],
   email: "mohamedshaheen1898@gmail.com",
   additionalInfo: [
     {
