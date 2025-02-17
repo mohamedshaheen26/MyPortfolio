@@ -78,7 +78,7 @@ const Header = () => {
     <header
       className={`bg-light-bg dark:bg-dark-bg ${
         scrolled ? "scrolled " : ""
-      } shadow-md`}
+      } shadow-md dark:shadow-[#5a5a5a33]`}
     >
       <div className='mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between'>
         <a className='block text-teal-600' href='/'>

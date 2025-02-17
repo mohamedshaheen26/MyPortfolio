@@ -34,12 +34,25 @@ body {
 }
 
 header {
-  position: sticky;
-  top: -2px;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 99999;
-  transition: 0.3s cubic-bezier(0, 0.54, 1, 1);
+  height: 75px;
+  transition: all 0.3s cubic-bezier(0, 0.54, 1, 1);
+}
+
+header.scrolled {
+  height: 60px;
+}
+
+header img {
+  transition: all 0.3s cubic-bezier(0, 0.54, 1, 1);
+}
+
+header.scrolled img {
+  width: 60px;
 }
 
 .home {
