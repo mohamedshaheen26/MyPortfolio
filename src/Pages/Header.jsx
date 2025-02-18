@@ -267,18 +267,6 @@ const Header = () => {
 
         <div className='flex items-center gap-4'>
           <div className='flex flex-col justify-center mt-4'>
-            <label for='light-switch' class='sr-only'>
-              Toggle Light Switch
-            </label>
-            <input
-              type='checkbox'
-              name='light-switch'
-              id='light-switch'
-              className='light-switch sr-only'
-              onClick={toggleDarkMode}
-              checked={isDarkMode}
-              readOnly
-            />
             <label className='relative cursor-pointer' htmlFor='light-switch'>
               <svg
                 className='dark:hidden'
@@ -312,6 +300,15 @@ const Header = () => {
               </svg>
               <span className='sr-only'></span>
             </label>
+            <input
+              type='checkbox'
+              name='light-switch'
+              id='light-switch'
+              className='light-switch sr-only'
+              onClick={toggleDarkMode}
+              checked={isDarkMode}
+              readOnly
+            />
           </div>
 
           <button

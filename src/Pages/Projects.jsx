@@ -107,12 +107,12 @@ const Projects = ({ resumeData }) => {
                       </h3>
                     </div>
                     <a
-                      class='bg-[#4FC3F7] py-3 px-3.5 rounded-full transition-all duration-300 hover:bg-[#73d4ff] text-white focus:outline-none inline-flex items-center justify-center'
+                      className='bg-[#4FC3F7] py-3 px-3.5 rounded-full transition-all duration-300 hover:bg-[#73d4ff] text-white focus:outline-none inline-flex items-center justify-center'
                       href='https://stream-vibe-wine.vercel.app/'
                       target='_blank'
                       aria-label='Open StreamVibe'
                     >
-                      <i class='fa-solid fa-arrow-up-right-from-square'></i>
+                      <i className='fa-solid fa-arrow-up-right-from-square'></i>
                     </a>
                   </div>
                 </motion.div>
