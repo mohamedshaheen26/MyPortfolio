@@ -9,7 +9,7 @@ const resume = ({ resumeData }) => {
     <section
       ref={scrollableParentRef}
       id='experience'
-      className='overflow-hidden pt-20'
+      className='overflow-hidden pt-12'
     >
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>
@@ -71,7 +71,7 @@ const resume = ({ resumeData }) => {
                           : { x: -300, opacity: 0 }
                       }
                       transition={{ duration: 0.5 }}
-                      className='border border-[white] dark:border-[#2B2B2B] rounded-lg p-8 
+                      className='border border-[white] dark:border-[#2B2B2B] rounded-lg p-4 md:p-6 lg:p-8 
                       bg-[linear-gradient(136deg,#f5f8ff00,#BCE7FA)] 
                       dark:bg-[linear-gradient(136deg,rgb(28,28,28),#050505)] 
                       dark:mix-blend-plus-lighter relative bullet-before triangle-after'

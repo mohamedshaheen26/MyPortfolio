@@ -10,7 +10,7 @@ const About = ({ resumeData }) => {
     dots: false,
     arrows: false,
     autoplay: true,
-    slidesToShow: 7,
+    slidesToShow: 10,
     autoplaySpeed: 0,
     pauseOnHover: true,
     speed: 5000,
@@ -18,15 +18,39 @@ const About = ({ resumeData }) => {
     pauseOnHover: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 2000,
+        settings: {
+          slidesToShow: 7,
+        },
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 1200,
         settings: {
           slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 2,
         },
       },
     ],
@@ -36,7 +60,7 @@ const About = ({ resumeData }) => {
     <>
       <section
         id='about'
-        className='overflow-hidden pt-24 md:pt-20'
+        className='overflow-hidden pt-12'
         ref={scrollableParentRef}
       >
         <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -82,7 +106,7 @@ const About = ({ resumeData }) => {
                 }
                 transition={{ duration: 0.3 }}
                 whileHover={{ scale: 1.05 }}
-                className='service border border-[white] dark:border-[#2B2B2B] rounded-lg p-8 
+                className='service border border-[white] dark:border-[#2B2B2B] rounded-lg p-4 md:p-6 lg:p-8 
                 bg-[linear-gradient(136deg,#f5f8ff00,#BCE7FA)] 
                 dark:bg-[linear-gradient(136deg,rgb(28,28,28),#050505)] 
                 dark:mix-blend-plus-lighter flex flex-col items-start 
@@ -109,7 +133,7 @@ const About = ({ resumeData }) => {
                 }
                 transition={{ duration: 0.3 }}
                 whileHover={{ scale: 1.05 }}
-                className='service border border-[white] dark:border-[#2B2B2B] rounded-lg p-8 
+                className='service border border-[white] dark:border-[#2B2B2B] rounded-lg p-4 md:p-6 lg:p-8 
                 bg-[linear-gradient(136deg,#f5f8ff00,#BCE7FA)] 
                 dark:bg-[linear-gradient(136deg,rgb(28,28,28),#050505)] 
                 dark:mix-blend-plus-lighter flex flex-col items-start 
@@ -150,7 +174,7 @@ const About = ({ resumeData }) => {
                 className='skill text-center p-4 opacity-75 rounded-lg'
               >
                 <img src={skill.img} width={30} alt={skill.name} />
-                <p className='text-sm text-light-text dark:text-white'>
+                <p className='text-xs md:text-sm text-light-text dark:text-white'>
                   {skill.name}
                 </p>
               </motion.div>

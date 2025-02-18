@@ -21,7 +21,7 @@ const Projects = ({ resumeData }) => {
     <section
       ref={scrollableParentRef}
       id='projects'
-      className='overflow-hidden pt-24 md:pt-20'
+      className='overflow-hidden pt-12'
     >
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>
