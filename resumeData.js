@@ -112,7 +112,7 @@ let resumeData = {
       name: "StreamVibe",
       description: "Movies App",
       category: "react",
-      imgurl: "imgs/StreamVibe-Mockup.png",
+      imgurl: "imgs/StreamVibe-Mockup.avif",
       link: "https://stream-vibe-wine.vercel.app/",
     },
     {
@@ -120,7 +120,7 @@ let resumeData = {
       name: "Nova Website",
       description: "",
       category: "javascript",
-      imgurl: "imgs/Nova-Mockup.png",
+      imgurl: "imgs/Nova-Mockup.avif",
       link: "https://mohamedshaheen26.github.io/Nova-Website/",
     },
     {
@@ -128,7 +128,7 @@ let resumeData = {
       name: "Dashboard",
       description: "",
       category: "react",
-      imgurl: "imgs/Dashboard-Mockup.png",
+      imgurl: "imgs/Dashboard-Mockup.avif",
       link: "https://dashboardwithreact.vercel.app/",
     },
     {
@@ -136,7 +136,7 @@ let resumeData = {
       name: "Creative Agency",
       description: "",
       category: "javascript",
-      imgurl: "imgs/CreativeAgency-Mockup.png",
+      imgurl: "imgs/CreativeAgency-Mockup.avif",
       link: "https://mohamedshaheen26.github.io/Creative-Agency/",
     },
     {
@@ -144,7 +144,7 @@ let resumeData = {
       name: "Active Box",
       description: "",
       category: "javascript",
-      imgurl: "imgs/ActiveBox-Mockup.png",
+      imgurl: "imgs/ActiveBox-Mockup.avif",
       link: "https://mohamedshaheen26.github.io/ActiveBox",
     },
     {
@@ -152,7 +152,7 @@ let resumeData = {
       name: "bondi Theme",
       description: "",
       category: "javascript",
-      imgurl: "imgs/BondiTheme-Mockup.png",
+      imgurl: "imgs/BondiTheme-Mockup.avif",
       link: "https://mohamedshaheen26.github.io/bondi-Theme/",
     },
     {
@@ -160,7 +160,7 @@ let resumeData = {
       name: "Leon Template",
       description: "",
       category: "htmlcss",
-      imgurl: "imgs/Loen-Mockup.png",
+      imgurl: "imgs/Loen-Mockup.avif",
       link: "https://mohamedshaheen26.github.io/Leon-Template/",
     },
     {
@@ -168,7 +168,7 @@ let resumeData = {
       name: "Kasper Template",
       description: "",
       category: "htmlcss",
-      imgurl: "imgs/Kasper-Mockup.png",
+      imgurl: "imgs/Kasper-Mockup.avif",
       link: "https://mohamedshaheen26.github.io/Kasper-Template/",
     },
     {
@@ -176,7 +176,7 @@ let resumeData = {
       name: "Axit Website",
       description: "",
       category: "htmlcss",
-      imgurl: "imgs/AxitWebsite-Mockup.png",
+      imgurl: "imgs/AxitWebsite-Mockup.avif",
       link: "https://mohamedshaheen26.github.io/Axit-Website/",
     },
   ],

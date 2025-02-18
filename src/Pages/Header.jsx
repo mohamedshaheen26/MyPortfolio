@@ -82,7 +82,7 @@ const Header = () => {
     >
       <div className='mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between'>
         <a className='block text-teal-600' href='/'>
-          <img src='./assets/Logo.png' alt='Logo' width={70} loading='lazy' />
+          <img src='./assets/Logo.webp' alt='Logo' width={70} />
         </a>
 
         {/* Mobile Menu (Absolute Positioning) */}
@@ -267,6 +267,9 @@ const Header = () => {
 
         <div className='flex items-center gap-4'>
           <div className='flex flex-col justify-center mt-4'>
+            <label for='light-switch' class='sr-only'>
+              Toggle Light Switch
+            </label>
             <input
               type='checkbox'
               name='light-switch'
