@@ -10,4 +10,4 @@
   .triangle-after {
     @apply after:content-[''] after:absolute after:w-0 after:h-0 after:border-[10px] after:border-transparent after:md:border-l-white after:md:dark:border-l-[#2B2B2B] after:border-r-white after:dark:border-r-[#2B2B2B] after:md:border-r-0 after:md:right-[-0.68rem] after:left-[-1.29rem] after:md:left-auto after:top-5;
   }
-} 
+}

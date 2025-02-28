@@ -74,6 +74,23 @@ const About = ({ resumeData }) => {
               {resumeData.aboutme}
             </motion.p>
 
+            <motion.div
+              initial={{ opacity: 0, y: "-100%" }}
+              animate={
+                isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: "-100%" }
+              }
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className='flex flex-col justify-center'
+            >
+              <a
+                href='/cv/MohamedShaheenResume.pdf'
+                download
+                className='bg-transparent border-2 border-gray-600 dark:border-primary dark:text-white hover:bg-primary hover:border-primary hover:text-white transition-all mt-10 py-3 px-8 rounded-3xl'
+              >
+                Download CV
+              </a>
+            </motion.div>
+
             <div className='max-w-4xl py-6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden'>
               <motion.div
                 initial={{ x: -500, opacity: 0 }}
