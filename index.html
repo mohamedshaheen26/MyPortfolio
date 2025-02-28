@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/src/assets/Logo.png" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/Logo.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Mohamed Shaheen</title>
@@ -26,11 +26,18 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap') format('woff2');
+      font-display: swap;
+    }
+  </style>
 </head>
 
 <body class='bg-light-bg dark:bg-dark-bg transition-all ease-in-out duration-500'>
   <div id="root"></div>
-  <script type="module" src="/src/main.jsx" defer></script>
+  <script type="module" src="/src/main.jsx" defer async></script>
 </body>
 
 </html>

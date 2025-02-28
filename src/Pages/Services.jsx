@@ -24,7 +24,7 @@ const Services = ({ resumeData }) => {
     <section
       ref={scrollableParentRef}
       id='services'
-      className='overflow-hidden pt-24 md:pt-20'
+      className='overflow-hidden pt-12'
     >
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>
@@ -52,7 +52,7 @@ const Services = ({ resumeData }) => {
             </motion.span>
           </motion.div>
           <div className='w-full max-w-2xl lg:max-w-7xl px-6 pt-6 lg:px-8 mx-auto overflow-hidden'>
-            <div className='services grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 overflow-hidden'>
+            <div className='services grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 overflow-hidden'>
               {resumeData.services &&
                 resumeData.services.map((item, index) => {
                   return (
@@ -63,7 +63,7 @@ const Services = ({ resumeData }) => {
                       whileInView='visible'
                       whileHover='hover'
                       custom={index}
-                      className='service border border-[white] dark:border-[#2B2B2B] rounded-lg p-8 
+                      className='service border border-[white] dark:border-[#2B2B2B] rounded-lg p-4 md:p-6 lg:p-8 
                       bg-[linear-gradient(136deg,#f5f8ff00,#BCE7FA)] 
                       dark:bg-[linear-gradient(136deg,rgb(28,28,28),#050505)] 
                       dark:mix-blend-plus-lighter flex flex-col items-start 

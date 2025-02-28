@@ -82,7 +82,7 @@ const Header = () => {
     >
       <div className='mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between'>
         <a className='block text-teal-600' href='/'>
-          <img src='./assets/Logo.png' alt='Logo' width={70} loading='lazy' />
+          <img src='./assets/Logo.webp' alt='Logo' width={70} />
         </a>
 
         {/* Mobile Menu (Absolute Positioning) */}
@@ -267,15 +267,6 @@ const Header = () => {
 
         <div className='flex items-center gap-4'>
           <div className='flex flex-col justify-center mt-4'>
-            <input
-              type='checkbox'
-              name='light-switch'
-              id='light-switch'
-              className='light-switch sr-only'
-              onClick={toggleDarkMode}
-              checked={isDarkMode}
-              readOnly
-            />
             <label className='relative cursor-pointer' htmlFor='light-switch'>
               <svg
                 className='dark:hidden'
@@ -307,8 +298,16 @@ const Header = () => {
                   d='M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z'
                 />
               </svg>
-              <span className='sr-only'></span>
+              <span className='sr-only'>Toggle dark mode</span>
             </label>
+            <input
+              type='checkbox'
+              name='light-switch'
+              id='light-switch'
+              className='light-switch sr-only'
+              onClick={toggleDarkMode}
+              checked={isDarkMode}
+            />
           </div>
 
           <button

@@ -30,7 +30,7 @@ const Contact = ({ resumeData }) => {
     <section
       ref={scrollableParentRef}
       id='contact'
-      className='overflow-hidden pt-24 md:pt-20 mb-32'
+      className='overflow-hidden pt-12 mb-32'
     >
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div className='content flex flex-col justify-center items-center transition-all ease-in-out duration-500'>

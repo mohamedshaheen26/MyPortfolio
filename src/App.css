@@ -56,7 +56,7 @@ header.scrolled img {
 }
 
 .home {
-  height: calc(100vh - 70px);
+  height: calc(100vh);
 }
 
 .skills {
