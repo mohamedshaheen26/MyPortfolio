@@ -53,7 +53,7 @@ const Projects = ({ resumeData }) => {
         <div className='w-full max-w-2xl lg:max-w-7xl px-6 pt-6 lg:px-8 mx-auto overflow-hidden'>
           <div className='w-full px-4'>
             <ul className='flex flex-wrap justify-center gap-5 md:gap-10 lg:gap-14 mb-2 lg:mb-12 space-x-1'>
-              {["all", "htmlcss", "javascript", "react"].map((category) => (
+              {["all", "html&css", "javascript", "react"].map((category) => (
                 <motion.li
                   key={category}
                   initial={{ scale: 0 }}
@@ -69,7 +69,9 @@ const Projects = ({ resumeData }) => {
                         : "inactiveClasses text-body-color hover:bg-[#484E53] dark:text-[#A9A9A9] dark:hover:bg-[#484E53] hover:text-white"
                     }`}
                   >
-                    {category.toUpperCase()}
+                    {category.includes("&")
+                      ? category.replace("&", " & ").toUpperCase()
+                      : category.toUpperCase()}
                   </button>
                 </motion.li>
               ))}

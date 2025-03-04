@@ -108,12 +108,20 @@ let resumeData = {
   ],
   projects: [
     {
-      id: 1,
+      id: 0,
       name: "StreamVibe",
       description: "Movies App",
       category: "react",
       imgurl: "imgs/StreamVibe-Mockup.avif",
       link: "https://stream-vibe-wine.vercel.app/",
+    },
+    {
+      id: 1,
+      name: "My Portfolio",
+      description: "Portfolio Website",
+      category: "react",
+      imgurl: "imgs/MyPortfolio-Mockup.png",
+      link: "https://mohamed-shaheen-98.vercel.app/",
     },
     {
       id: 2,
