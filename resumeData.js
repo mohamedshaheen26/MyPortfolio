@@ -1,5 +1,5 @@
 let resumeData = {
-  imagebaseurl: "./assets/Avatar.png",
+  imagebaseurl: "./assets/Avatar.webp",
   name: "Mohamed Shaheen",
   roles: ["Frontend Developer", "React Developer", "UI/UX Designer"],
   email: "mohamedshaheen1898@gmail.com",
@@ -120,7 +120,7 @@ let resumeData = {
       name: "My Portfolio",
       description: "Portfolio Website",
       category: "react",
-      imgurl: "imgs/MyPortfolio-Mockup.png",
+      imgurl: "imgs/MyPortfolio-Mockup.avif",
       link: "https://mohamed-shaheen-98.vercel.app/",
     },
     {
