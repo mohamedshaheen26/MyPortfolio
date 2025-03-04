@@ -16,10 +16,20 @@ function App() {
   const [loader, setLoader] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Load dark mode preference from localStorage
   useEffect(() => {
-    const savedDarkMode = localStorage.getItem("theme") === "dark";
-    setIsDarkMode(savedDarkMode);
+    // Get user preference from localStorage or check system preference
+    const userTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (userTheme === "dark" || (!userTheme && systemPrefersDark)) {
+      document.documentElement.classList.add("dark");
+      setIsDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      setIsDarkMode(false);
+    }
   }, []);
 
   useEffect(() => {
