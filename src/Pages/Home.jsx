@@ -68,7 +68,7 @@ const Home = ({ resumeData }) => {
             transition={{ duration: 0.8 }}
             src={resumeData.imagebaseurl}
             alt='Profile'
-            className='w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full'
+            className='w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover'
             loading='lazy'
           />
           <motion.h1

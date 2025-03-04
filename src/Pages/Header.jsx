@@ -82,7 +82,7 @@ const Header = () => {
     >
       <div className='mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between'>
         <a className='block text-teal-600' href='/'>
-          <img src='./assets/Logo.webp' alt='Logo' width={70} />
+          <img src='./assets/Logo.webp' alt='Logo' width='70' height='70' />
         </a>
 
         {/* Mobile Menu (Absolute Positioning) */}
