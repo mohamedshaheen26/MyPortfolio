@@ -305,7 +305,7 @@ const Header = () => {
               name='light-switch'
               id='light-switch'
               className='light-switch sr-only'
-              onClick={toggleDarkMode}
+              onChange={toggleDarkMode}
               checked={isDarkMode}
             />
           </div>
